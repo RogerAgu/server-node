@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import pino from 'pino'
+import consola from 'consola'
 
-const logger = pino({ prettyPrint: { colorize: true } })
+const logger = consola
 
 export default logger
