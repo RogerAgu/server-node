@@ -4,7 +4,7 @@ import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 import helmet from 'helmet'
-
+import bodyParser from 'body-parser'
 import logger from './utils/logger'
 import router from './routes'
 import { notFound, errorHandler } from './utils/errors'
@@ -21,7 +21,7 @@ app.use(
   }),
 )
 app.use(helmet())
-
+app.use(bodyParser.json())
 app.use('/', router)
 
 app.use(notFound)
