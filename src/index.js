@@ -11,7 +11,7 @@ import logger from './utils/logger'
 import router from './routes'
 import { notFound, errorHandler } from './utils/errors'
 
-const port = Number(process.env.PORT)
+const port = process.env.PORT || 3000
 
 const app = express()
 app.use(
