@@ -35,6 +35,6 @@ model Employee {
   email        String     @unique
   departmentId String
   department   Department @relation(fields: [departmentId], references: [departmentId])
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
 }
